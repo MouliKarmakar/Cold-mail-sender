@@ -20,8 +20,8 @@
     const achievement = v('achievement') || 'Shining Star Award for delivering pixel-perfect, high-performance interfaces';
     const cta = v('cta') || 'a brief call';
     const name = v('senderName') || 'Mouli Karmakar';
-    const portfolio = v('portfolio') || 'https://moulikarmakar.dev';
-    const linkedin = v('linkedin') || 'https://linkedin.com/in/moulikarmakar';
+    const portfolio = v('portfolio') || 'https://moulikarmakarportfolio.netlify.app/';
+    const linkedin = v('linkedin') || 'https://www.linkedin.com/in/mouli-karmakar-19631226b/';
 
     const sourceStr = source ? ` through ${source}` : '';
     const teamStr = team ? ` (${team})` : '';
@@ -48,8 +48,8 @@
     const senderEmail = v('senderEmail') || 'moulikarmakar7596@gmail.com';
     const senderName = v('senderName') || 'Mouli Karmakar';
     const senderPhone = v('senderPhone') || '7596976614';
-    const linkedin = v('linkedin') || 'https://linkedin.com/in/moulikarmakar';
-    const portfolio = v('portfolio') || 'https://moulikarmakar.dev';
+    const linkedin = v('linkedin') || 'https://www.linkedin.com/in/mouli-karmakar-19631226b/';
+    const portfolio = v('portfolio') || 'https://moulikarmakarportfolio.netlify.app/';
     const github = v('github') || 'https://github.com/MouliKarmakar';
     const subject = `${role} — Application | ${senderName}`;
 
@@ -67,15 +67,52 @@
     document.getElementById('prev-github-link').href = github;
   }
 
-  function openMailto() {
-    const to = v('hrEmail');
-    const role = v('role') || 'Frontend Developer';
-    const company = v('company') || 'Company';
-    const senderName = v('senderName') || 'Mouli Karmakar';
-    const subject = encodeURIComponent(`${role} — Application | ${senderName}`);
-    const body = encodeURIComponent(generateBody());
-    const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
-    window.open(mailto, '_blank');
+    async function sendEmail() {
+    const hrEmail = v('hrEmail');
+    const role = v('role');
+    const company = v('company');
+
+    if (!hrEmail || !role || !company) {
+      showToast('⚠ Please fill in HR Email, Role, and Company.', 'error');
+      return;
+    }
+
+    const btn = document.getElementById('sendBtn');
+    btn.classList.add('loading');
+    btn.disabled = true;
+
+    const payload = {
+      hrName: v('hrName'),
+      hrEmail,
+      company,
+      role,
+      emailBody: generateBody(),
+      senderName: v('senderName'),
+      senderEmail: v('senderEmail'),
+      senderPhone: v('senderPhone'),
+      linkedin: v('linkedin'),
+      portfolio: v('portfolio'),
+      github: v('github'),
+    };
+
+    try {
+      const res = await fetch(`http://localhost:8000/api/mail/send`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (data.success) {
+        showToast('✓ Email sent successfully!', 'success');
+      } else {
+        showToast(`✗ ${data.message}`, 'error');
+      }
+    } catch (err) {
+      showToast('✗ Could not reach the server. Is it running?', 'error');
+    } finally {
+      btn.classList.remove('loading');
+      btn.disabled = false;
+    }
   }
 
   function copyEmailBody() {
@@ -97,9 +134,10 @@
     document.getElementById('senderName').value = 'Mouli Karmakar';
     document.getElementById('senderEmail').value = 'moulikarmakar7596@gmail.com';
     document.getElementById('senderPhone').value = '7596976614';
-    document.getElementById('linkedin').value = 'https://linkedin.com/in/moulikarmakar';
-    document.getElementById('portfolio').value = 'https://moulikarmakar.dev';
+    document.getElementById('linkedin').value = 'https://www.linkedin.com/in/mouli-karmakar-19631226b/';
+    document.getElementById('portfolio').value = 'https://moulikarmakarportfolio.netlify.app/';
     document.getElementById('github').value = 'https://github.com/MouliKarmakar';
+    document.getElementById('resume').value = 'https://drive.google.com/file/d/1TwPa_8O4Sq6m7hpV0ELemFRIfleBE1dZ/view?usp=sharing';
     selectTone(document.querySelector('[data-tone="professional"]'));
     updatePreview();
   }

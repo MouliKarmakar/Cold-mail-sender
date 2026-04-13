@@ -183,7 +183,7 @@
             <input
               type="text"
               id="linkedin"
-              value="https://linkedin.com/in/moulikarmakar"
+              value="https://www.linkedin.com/in/mouli-karmakar-19631226b/"
               oninput="updatePreview()"
             />
           </div>
@@ -194,7 +194,7 @@
             <input
               type="text"
               id="portfolio"
-              value="https://moulikarmakar.dev"
+              value="https://moulikarmakarportfolio.netlify.app/"
               oninput="updatePreview()"
             />
           </div>
@@ -208,10 +208,21 @@
             />
           </div>
         </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Resume URL</label>
+            <input
+              type="text"
+              id="resume"
+              value="https://drive.google.com/file/d/1TwPa_8O4Sq6m7hpV0ELemFRIfleBE1dZ/view?usp=sharing"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
 
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="openMailto()">
-            ✉ Open in Mail App
+          <button id="sendBtn" class="btn btn-primary" onclick="sendEmail()">
+            ✉ Send Email
           </button>
           <button class="btn btn-secondary" onclick="copyEmailBody()">
             ⎘ Copy Body
@@ -310,6 +321,13 @@
                   href="#"
                   target="_blank"
                   >GitHub ↗</a
+                >
+                <a
+                  class="footer-link"
+                  id="prev-resume-link"
+                  href="#"
+                  target="_blank"
+                  >Resume ↗</a
                 >
               </div>
             </div>
