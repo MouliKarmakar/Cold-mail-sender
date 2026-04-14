@@ -2,12 +2,12 @@
 
 :root {
   --bg:       #0a0a0c;
-  --surface:  #111114;
+  --surface:  #fff9f5;
   --surface2: #18181d;
   --surface3: #1f1f26;
   --border:   #2a2a33;
   --border2:  #353540;
-  --text:     #e8e6e1;
+  --text:     #0a0a0a;
   --text-dim: #888896;
   --muted:    #52525e;
   --accent:   #e8512a;
@@ -44,13 +44,13 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .field-row.single { grid-template-columns: 1fr; }
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
 .field label { font-size: 10px; font-weight: 500; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; font-family: 'DM Mono', monospace; }
-.field input, .field textarea { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 10px 13px; font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--text); transition: border-color 0.2s, box-shadow 0.2s; outline: none; resize: vertical; }
+.field input, .field textarea { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 10px 13px; font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--text); transition: border-color 0.2s, box-shadow 0.2s; outline: none; resize: vertical; }
 .field input::placeholder, .field textarea::placeholder { color: var(--muted); }
 .field input:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,81,42,0.12); background: var(--surface3); }
 .field textarea { min-height: 80px; }
 
 .tone-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.tone-chip { background: var(--surface2); border: 1px solid var(--border2); border-radius: 20px; padding: 6px 16px; font-size: 11px; cursor: pointer; transition: all 0.15s; font-family: 'DM Mono', monospace; color: var(--text-dim); user-select: none; }
+.tone-chip { background: var(--surface); border: 1px solid var(--border2); border-radius: 20px; padding: 6px 16px; font-size: 11px; cursor: pointer; transition: all 0.15s; font-family: 'DM Mono', monospace; color: var(--text-dim); user-select: none; }
 .tone-chip.active, .tone-chip:hover { background: var(--accent); border-color: var(--accent); color: white; box-shadow: 0 0 12px rgba(232,81,42,0.3); }
 
 .btn-row { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
@@ -58,7 +58,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .btn-primary { background: var(--accent); color: white; flex: 1; justify-content: center; box-shadow: 0 4px 20px rgba(232,81,42,0.25); }
 .btn-primary:hover:not(:disabled) { background: #c43f1e; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(232,81,42,0.4); }
 .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
-.btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border2); }
+.btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border2); }
 .btn-secondary:hover { background: var(--surface3); }
 .btn-outline { background: transparent; color: var(--accent2); border: 1px solid var(--accent2); }
 .btn-outline:hover { background: var(--accent2); color: white; }
