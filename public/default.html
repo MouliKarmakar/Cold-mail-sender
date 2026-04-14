@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cold Mail Sender — Mouli Karmakar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Cold<span>Mail</span></div>
+      <div class="tagline">Craft · Personalize · Send</div>
+    </header>
+
+    <div class="main-grid">
+      <!-- ── FORM PANEL ── -->
+      <div class="form-panel">
+        <div class="panel-title">Compose Your <span>Cold Mail</span></div>
+        <div class="panel-sub">
+          // fill in the fields — preview updates live
+        </div>
+
+        <!-- Recipient -->
+        <div class="section-label">Recipient</div>
+        <div class="field-row">
+          <div class="field">
+            <label>HR / Recruiter Name</label>
+            <input
+              type="text"
+              id="hrName"
+              placeholder="e.g. Priya Sharma"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>Company Name</label>
+            <input
+              type="text"
+              id="company"
+              placeholder="e.g. Google"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Role Applying For</label>
+            <input
+              type="text"
+              id="role"
+              placeholder="e.g. Senior Frontend Developer"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>HR Email (for mailto)</label>
+            <input
+              type="email"
+              id="hrEmail"
+              placeholder="hr@company.com"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+
+        <!-- Job Context -->
+        <div class="section-label">Job Context</div>
+        <div class="field-row">
+          <div class="field">
+            <label>How did you find the role?</label>
+            <input
+              type="text"
+              id="source"
+              placeholder="e.g. LinkedIn, Naukri, referral"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>Specific Team / Product</label>
+            <input
+              type="text"
+              id="team"
+              placeholder="e.g. Payments team, consumer app"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+        <div class="field field-row single">
+          <label>Why this company? (1–2 lines)</label>
+          <textarea
+            id="whyCompany"
+            placeholder="e.g. I admire your focus on design-driven products and the engineering culture you've built..."
+            oninput="updatePreview()"
+          ></textarea>
+        </div>
+
+        <!-- Personalisation -->
+        <div class="section-label">Personalisation</div>
+        <div class="field-row">
+          <div class="field">
+            <label>Key Achievement to Highlight</label>
+            <input
+              type="text"
+              id="achievement"
+              placeholder="e.g. Shining Star Award, 30% Core Web Vitals boost"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>CTA / Ask</label>
+            <input
+              type="text"
+              id="cta"
+              placeholder="e.g. a 20-min call, portfolio review"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+
+        <!-- Tone -->
+        <div class="section-label">Email Tone</div>
+        <div class="tone-chips">
+          <div
+            class="tone-chip active"
+            data-tone="professional"
+            onclick="selectTone(this)"
+          >
+            Professional
+          </div>
+          <div
+            class="tone-chip"
+            data-tone="conversational"
+            onclick="selectTone(this)"
+          >
+            Conversational
+          </div>
+          <div class="tone-chip" data-tone="bold" onclick="selectTone(this)">
+            Bold & Punchy
+          </div>
+          <div class="tone-chip" data-tone="humble" onclick="selectTone(this)">
+            Humble & Eager
+          </div>
+        </div>
+
+        <!-- Sender (pre-filled from resume) -->
+        <div class="section-label">Your Info (pre-filled from résumé)</div>
+        <div class="field-row">
+          <div class="field">
+            <label>Your Name</label>
+            <input
+              type="text"
+              id="senderName"
+              value="Mouli Karmakar"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>Your Email</label>
+            <input
+              type="email"
+              id="senderEmail"
+              value="moulikarmakar7596@gmail.com"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Phone</label>
+            <input
+              type="text"
+              id="senderPhone"
+              value="7596976614"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>LinkedIn URL</label>
+            <input
+              type="text"
+              id="linkedin"
+              value="https://www.linkedin.com/in/mouli-karmakar-19631226b/"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Portfolio URL</label>
+            <input
+              type="text"
+              id="portfolio"
+              value="https://moulikarmakarportfolio.netlify.app/"
+              oninput="updatePreview()"
+            />
+          </div>
+          <div class="field">
+            <label>GitHub URL</label>
+            <input
+              type="text"
+              id="github"
+              value="https://github.com/MouliKarmakar"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Resume URL</label>
+            <input
+              type="text"
+              id="resume"
+              value="https://drive.google.com/file/d/1TwPa_8O4Sq6m7hpV0ELemFRIfleBE1dZ/view?usp=sharing"
+              oninput="updatePreview()"
+            />
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button id="sendBtn" class="btn btn-primary" onclick="sendEmail()">
+            ✉ Send Email
+          </button>
+          <button class="btn btn-secondary" onclick="copyEmailBody()">
+            ⎘ Copy Body
+          </button>
+          <button class="btn btn-outline" onclick="resetForm()">↺ Reset</button>
+        </div>
+      </div>
+
+      <!-- ── PREVIEW PANEL ── -->
+      <div class="preview-panel">
+        <div class="panel-title">Live <span>Preview</span></div>
+        <div class="panel-sub">// your email, rendered in real-time</div>
+
+        <div class="email-preview-wrap">
+          <!-- Chrome bar -->
+          <div class="email-chrome">
+            <div class="chrome-dot-row">
+              <div class="chrome-dot red"></div>
+              <div class="chrome-dot yellow"></div>
+              <div class="chrome-dot green"></div>
+            </div>
+            <div class="email-meta">
+              <div>
+                <strong>To:</strong> <span id="prev-to">hr@company.com</span>
+              </div>
+              <div>
+                <strong>From:</strong>
+                <span id="prev-from">moulikarmakar7596@gmail.com</span>
+              </div>
+              <div>
+                <strong>Subject:</strong>
+                <span id="prev-subject">Frontend Developer — Application</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="email-body">
+            <!-- Letterhead -->
+            <div class="email-letterhead">
+              <div>
+                <div class="lh-name" id="prev-lh-name">Mouli Karmakar</div>
+                <div class="lh-title">
+                  Frontend Developer · React.js · Next.js
+                </div>
+              </div>
+              <div class="lh-contact" id="prev-lh-contact">
+                moulikarmakar7596@gmail.com<br />
+                7596976614<br />
+                Bengaluru, KA
+              </div>
+            </div>
+            <div class="accent-bar"></div>
+
+            <!-- Subject inside body -->
+            <div class="email-content">
+              <div class="email-subject-line" id="prev-body-subject">
+                Application for Senior Frontend Developer — Google
+              </div>
+              <div class="email-text" id="prev-body"></div>
+            </div>
+
+            <!-- Skills strip -->
+            <div class="email-skills-strip">
+              <span class="strip-label">Stack:</span>
+              <span class="skill-badge">React.js</span>
+              <span class="skill-badge">Next.js</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">Redux</span>
+              <span class="skill-badge">Tailwind</span>
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">REST APIs</span>
+              <span class="skill-badge">CI/CD</span>
+            </div>
+
+            <!-- Footer -->
+            <div class="email-footer">
+              <div class="footer-sig" id="prev-sig">Mouli Karmakar</div>
+              <div class="footer-links">
+                <a
+                  class="footer-link"
+                  id="prev-portfolio-link"
+                  href="#"
+                  target="_blank"
+                  >Portfolio ↗</a
+                >
+                <a
+                  class="footer-link"
+                  id="prev-linkedin-link"
+                  href="#"
+                  target="_blank"
+                  >LinkedIn ↗</a
+                >
+                <a
+                  class="footer-link"
+                  id="prev-github-link"
+                  href="#"
+                  target="_blank"
+                  >GitHub ↗</a
+                >
+                <a
+                  class="footer-link"
+                  id="prev-resume-link"
+                  href="#"
+                  target="_blank"
+                  >Resume ↗</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">✓ Copied to clipboard!</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

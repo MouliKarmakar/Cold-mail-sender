@@ -1,6 +1,6 @@
 import {Request,Response} from 'express'; 
 import transporter from './mailer';
-import { buildEmailHTML } from './emailTemplate';
+import { buildEmailHTML } from './Templates/emailTemplate';
 const useEmailSend= async (req: Request, res: Response) => {
   const {
     hrName, hrEmail, company, role,
