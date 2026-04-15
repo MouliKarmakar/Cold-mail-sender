@@ -46,7 +46,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .field label { font-size: 10px; font-weight: 500; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; font-family: 'DM Mono', monospace; }
 .field input, .field textarea { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 10px 13px; font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--text); transition: border-color 0.2s, box-shadow 0.2s; outline: none; resize: vertical; }
 .field input::placeholder, .field textarea::placeholder { color: var(--muted); }
-.field input:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,81,42,0.12); background: var(--surface3); }
+.field input:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,81,42,0.12); background: var(--surface); }
 .field textarea { min-height: 80px; }
 
 .tone-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }

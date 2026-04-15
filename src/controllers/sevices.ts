@@ -1,6 +1,7 @@
 import {Request,Response} from 'express'; 
 import transporter from './mailer';
 import { buildEmailHTML } from './Templates/emailTemplate';
+import { addEntry } from './spreadSheetController';
 const useEmailSend= async (req: Request, res: Response) => {
   const {
     hrName, hrEmail, company, role,
@@ -29,6 +30,14 @@ const useEmailSend= async (req: Request, res: Response) => {
       subject,
       text: emailBody,   // plain-text fallback
       html,              // styled HTML email
+    });
+
+    await addEntry({
+      hrEmail,
+      companyName: company,
+      position: role,
+      responseStatus: 'Sent',
+      didContacted: 'No',
     });
 
     res.status(200).json({ success: true, message: 'Email sent successfully!' });

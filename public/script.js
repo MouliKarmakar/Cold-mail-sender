@@ -153,6 +153,7 @@ async function sendEmail() {
     });
     const data = await res.json();
     showToast(data.success ? '✓ Email sent successfully!' : `✗ ${data.message}`, data.success ? 'success' : 'error');
+    if (data.success) resetForm();
   } catch {
     showToast('✗ Could not reach the server. Is it running?', 'error');
   } finally {
