@@ -146,7 +146,7 @@ async function sendEmail() {
   };
 
   try {
-    const res  = await fetch('https://cold-mail-sender-2m07.onrender.com/api/mail/send', {
+    const res  = await fetch('https://cold-mail-sender-tn9m.onrender.com/api/mail/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
