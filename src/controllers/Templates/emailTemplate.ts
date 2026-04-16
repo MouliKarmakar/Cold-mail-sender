@@ -65,8 +65,8 @@ export function buildEmailHTML(data: TemplateData): string {
           <p style="margin:0;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#92826a;font-weight:500;">Bundle Size Reduced</p>
         </td>
         <td style="width:25%;padding:18px 0;text-align:center;border-right:1px solid #e8dece;">
-          <p style="margin:0 0 4px;font-size:22px;font-weight:700;color:#c2410c;line-height:1;font-family:Georgia,serif;">8+</p>
-          <p style="margin:0;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#92826a;font-weight:500;">Reusable Components</p>
+          <p style="margin:0 0 4px;font-size:22px;font-weight:700;color:#c2410c;line-height:1;font-family:Georgia,serif;">🔖</p>
+          <p style="margin:0;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#92826a;font-weight:500;">Components Doc (StoryBook)</p>
         </td>
         <td style="width:25%;padding:18px 0;text-align:center;">
           <p style="margin:0 0 4px;font-size:22px;font-weight:700;color:#c2410c;line-height:1;">&#11088;</p>
