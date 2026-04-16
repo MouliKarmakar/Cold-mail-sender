@@ -4,7 +4,7 @@
   "description": "A Node.js backend for sending cold emails",
   "main": "dist/server.ts",
   "scripts": {
-    "start": "node dist/server.ts",
+    "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "lint": "eslint src/**/*.ts"
