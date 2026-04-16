@@ -2,7 +2,7 @@
   "name": "cold-mail-sender",
   "version": "1.0.0",
   "description": "A Node.js backend for sending cold emails",
-  "main": "dist/server.ts",
+  "main": "dist/server.js",
   "scripts": {
     "start": "node dist/server.js",
     "dev": "tsx watch src/server.ts",
