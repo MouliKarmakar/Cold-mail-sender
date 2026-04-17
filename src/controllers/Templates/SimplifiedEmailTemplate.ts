@@ -71,7 +71,7 @@ export function buildSimplifiedEmailHTML(data: TemplateData): string {
           class="container-card">
 
           <!-- ═══════════════════════════
-               HERO — warm amber gradient
+               HERO - warm amber gradient
                with BIG editorial name
           ═══════════════════════════ -->
           <tr>
@@ -82,7 +82,7 @@ export function buildSimplifiedEmailHTML(data: TemplateData): string {
                 Open to Opportunities &nbsp;
               </p>
 
-              <!-- BIG name — Playfair Display, editorial -->
+              <!-- BIG name - Playfair Display, editorial -->
               <h1 class="big-name" style="margin:0 0 6px;font-family:'Playfair Display',Georgia,serif;font-size:58px;font-weight:800;color:#ffffff;line-height:0.95;letter-spacing:-2px;">
                 Varun<br/>Kanade
               </h1>
@@ -135,7 +135,7 @@ export function buildSimplifiedEmailHTML(data: TemplateData): string {
           <tr>
             <td style="padding:0;background:#fdf8f0;">
 
-              <!-- ── STATS ROW — horizontal rule with numbers ── -->
+              <!-- ── STATS ROW - horizontal rule with numbers ── -->
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-bottom:1px solid #e8dece;">
                 <tr>
                   <td class="stat-cell" style="width:25%;padding:20px 0;text-align:center;border-right:1px solid #e8dece;">
@@ -183,7 +183,7 @@ export function buildSimplifiedEmailHTML(data: TemplateData): string {
                 </tr>
               </table>
 
-              <!-- ── WHAT I DO — 3 clean cards ── -->
+              <!-- ── WHAT I DO - 3 clean cards ── -->
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;margin-top:28px;border-top:1px solid #e8dece;border-bottom:1px solid #e8dece;">
                 <tr>
                   <!-- card 1 -->
@@ -244,7 +244,7 @@ export function buildSimplifiedEmailHTML(data: TemplateData): string {
           </tr>
 
           <!-- ═══════════════════════════
-               SIGNATURE — dark warm footer
+               SIGNATURE - dark warm footer
           ═══════════════════════════ -->
           <tr>
             <td style="padding:0;background:#1c1008;">

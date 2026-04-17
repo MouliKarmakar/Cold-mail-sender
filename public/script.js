@@ -30,7 +30,7 @@ function generateShortBody() {
     professional:
       `I am writing to express my interest in the ${role} position at ${company}${teamStr}${sourceStr}.\n\n` +
       `With 2+ years at InspironLabs, I specialize in building scalable, high-performance React.js / Next.js interfaces. ` +
-      `Recognized with the ${achievement} — I led a team of 4, architected a reusable component library across 3+ apps, ` +
+      `Recognized with the ${achievement} - I led a team of 4, architected a reusable component library across 3+ apps, ` +
       `improved Core Web Vitals by 30%, and reduced bundle size by 20%.${whyStr}\n\n` +
       `I'd love the opportunity for ${cta} to explore how I can contribute to your team.`,
 
@@ -38,13 +38,13 @@ function generateShortBody() {
       `I came across the ${role} opening at ${company}${sourceStr} and had to reach out!\n\n` +
       `2+ years at InspironLabs building production React.js / Next.js products. Highlights: ${achievement}, ` +
       `led a 4-person team, 20% bundle size reduction, 30% Core Web Vitals boost.${whyStr}\n\n` +
-      `Would love to chat — even ${cta} would be great. Portfolio linked below.`,
+      `Would love to chat - even ${cta} would be great. Portfolio linked below.`,
 
     bold:
       `I'll keep this short.\n\n` +
       `Frontend Developer. 2+ years. ${achievement}. Led teams. Shipped component libraries to npm. ` +
       `Boosted Core Web Vitals 30%.${whyStr}\n\n` +
-      `My work is linked below — takes 2 minutes. If it resonates, let's find ${cta}.`,
+      `My work is linked below - takes 2 minutes. If it resonates, let's find ${cta}.`,
 
     humble:
       `I'd be truly grateful for the opportunity to be considered for the ${role} role at ${company}${teamStr}${sourceStr}.\n\n` +
@@ -86,7 +86,7 @@ function updatePreview() {
   // Chrome meta
   document.getElementById('prev-to').textContent      = hrEmail;
   document.getElementById('prev-from').textContent    = senderEmail;
-  document.getElementById('prev-subject').textContent = `${role} — Application | ${senderName}`;
+  document.getElementById('prev-subject').textContent = `${role} - Application | ${senderName}`;
 
   // Hero
   document.getElementById('prev-lh-name').innerHTML = senderName.includes(' ')
@@ -102,7 +102,7 @@ function updatePreview() {
 
   // CTA closing line
   document.getElementById('prev-cta-text').textContent =
-    `I'd love to connect for ${cta} — my work speaks louder than a resume. Links below.`;
+    `I'd love to connect for ${cta} - my work speaks louder than a resume. Links below.`;
 
   // CTA buttons
   document.getElementById('prev-resume-link').href  = resume || '#';
@@ -163,7 +163,7 @@ async function sendEmail() {
 }
 
 function copyEmailBody() {
-  const subject = `${v('role') || 'Frontend Developer'} — Application | ${v('senderName') || 'Mouli Karmakar'}`;
+  const subject = `${v('role') || 'Frontend Developer'} - Application | ${v('senderName') || 'Mouli Karmakar'}`;
   const full    = `Subject: ${subject}\n\n${generateFullBody()}`;
   navigator.clipboard.writeText(full).then(() => showToast('✓ Copied to clipboard!', 'success'));
 }

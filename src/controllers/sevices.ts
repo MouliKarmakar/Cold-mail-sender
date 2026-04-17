@@ -15,7 +15,7 @@ const useEmailSend= async (req: Request, res: Response) => {
     return;
   }
 
-  const subject = `${role} — Application | ${senderName || 'Mouli Karmakar'}`;
+  const subject = `${role} - Application | ${senderName || 'Mouli Karmakar'}`;
 
   const html = buildEmailHTML({
     hrName, company, role, emailBody,

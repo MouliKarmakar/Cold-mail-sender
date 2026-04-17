@@ -162,7 +162,7 @@ export default transporter;
 await transporter.sendMail({
     from: `"${senderName}" <${process.env.EMAIL_USER}>`,
     to: hrEmail,
-    subject: `${role} — Application | ${senderName}`,
+    subject: `${role} - Application | ${senderName}`,
     text: emailBody,      // Plain-text fallback
     html: buildEmailHTML(/*...*/),  // Rich HTML email
 });

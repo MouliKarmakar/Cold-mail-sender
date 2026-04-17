@@ -21,7 +21,7 @@ export function buildEmailHTML(data: TemplateData): string {
   return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Application — ${senderName}</title>
+<title>Application - ${senderName}</title>
 </head>
 <body style="margin:0;padding:0;background:#1a0a00;font-family:Helvetica,Arial,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#1a0a00;padding:32px 14px 48px;">
@@ -112,7 +112,7 @@ export function buildEmailHTML(data: TemplateData): string {
   <!-- CTA -->
   <tr><td style="background:#fdf8f0;padding:22px 40px 32px;">
     <p style="margin:0 0 20px;font-size:13.5px;line-height:1.8;color:#3d2b1a;font-weight:300;">
-      I'd love to connect for a quick call — my work speaks louder than a resume. Links below.
+      I'd love to connect for a quick call - my work speaks louder than a resume. Links below.
     </p>
     <table cellpadding="0" cellspacing="0"><tr>
       ${resume ? `<td style="background:#c2410c;border-radius:3px;">
