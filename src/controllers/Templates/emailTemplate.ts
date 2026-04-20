@@ -33,7 +33,7 @@ export function buildEmailHTML(data: TemplateData): string {
     <p style="margin:0 0 24px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);">Open to Opportunities</p>
     <h1 style="margin:0 0 6px;font-family:Georgia,serif;font-size:52px;font-weight:900;color:#fff;line-height:0.95;letter-spacing:-2px;">${senderName.replace(' ', '<br/>')}</h1>
     <p style="margin:12px 0 0;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.75);">Frontend Engineer &middot; React.js &middot; Next.js &middot; TypeScript</p>
-    <p style="margin:6px 0 0;font-size:12px;color:rgba(255,255,255,0.5);">&#128205; Bengaluru &nbsp;&middot;&nbsp; Remote</p>
+    <p style="margin:6px 0 0;font-size:12px;color:rgba(255,255,255,0.5);">&#128205; Kolkata &nbsp;&middot;&nbsp;  Bengaluru &nbsp;&middot;&nbsp; Remote</p>
     <table width="100%" cellpadding="0" cellspacing="0" style="margin:18px 0;"><tr><td style="border-top:1px solid rgba(255,255,255,0.25);font-size:0;line-height:0;">&nbsp;</td></tr></table>
     <table width="100%" cellpadding="0" cellspacing="0"><tr>
       <td style="vertical-align:middle;width:65%;">
